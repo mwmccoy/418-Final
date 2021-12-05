@@ -27,8 +27,8 @@ namespace PT {
 
 template <typename Primitive>
 inline void BVH<Primitive>::fill_node(
-                std::vector<Primitive>::iterator start,
-                std::vector<Primitive>::iterator end,
+                typename std::vector<Primitive>::iterator start,
+                typename std::vector<Primitive>::iterator end,
                 size_t curr_node, size_t max_leaf_size) {
 
     size_t num_buckets = 16;

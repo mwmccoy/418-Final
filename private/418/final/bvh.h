@@ -7,7 +7,7 @@ public:
     BVH() = default;
     BVH(std::vector<Primitive> &&primitives, size_t max_leaf_size = 1);
     void build(std::vector<Primitive> &&primitives, size_t max_leaf_size = 1);
-    void fill_node(std::vector<Primitive>::iterator start, std::vector<Primitive>::iterator end, size_t curr_node, size_t max_leaf_size);
+    void fill_node(typename std::vector<Primitive>::iterator start, typename std::vector<Primitive>::iterator end, size_t curr_node, size_t max_leaf_size);
 
 
     BBox bbox() const;
